@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+$form-floating-label-transform: scale(.85) translateY(-1.3rem) translateX(0rem);
+$primary:#FF2B78;
+$secondary:#9E9E9E;
+$light:white;
+$form-label-color:$secondary;
+$text-label-color: $secondary;
+$input-placeholder-color: $secondary;
+$input-border-color: $secondary;
+$input-focus-border-color: $primary;
+$input-focus-box-shadow:none;
+$form-check-input-focus-box-shadow:none;
+$border-width:0;
+$input-border-radius:0;
+// $form-floating-padding-x: 0;
+// $form-floating-padding-y:0px;
+$form-floating-input-padding-t:1rem;
+$input-padding-x:0;
+$form-floating-padding-x:0;
+$form-floating-height:46px;
+$input-height:46px;
+$input-bg:$light;
+
+$input-disabled-bg:$light;
+$gradient:inear-gradient(30.57deg, #002A51 21.06%, #FF2B78 85.32%) ;
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+/*
+------------------------------------------------------------
+Project Name : Sample Project;
+------------------------------------------------------------
+*/
+
+/* Reset 
+--------------------------------------------------------------------------------------------------------*/
+
+/* 
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* General 
+--------------------------------------------------------------------------------------------------------*/
+* { outline: none !important; }
+// .window-resizing *, body:not(.page-loaded) *{transition: none!important; }
+a{transition: all 0.3s;}
+html, body { min-width: 320px; min-height: 100vh; }
+body {margin: 0; font-size: 16px; line-height: 22px; font-family: 'Roboto', sans-serif;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", 
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;-moz-osx-font-smoothing: grayscale; -ms-overflow-style: scrollbar; -webkit-font-smoothing: subpixel-antialiased;}
+.wrapper { min-height: 100vh; }
+a { color: #000; text-decoration: none; }
+a:hover { color: #999; text-decoration: none; }
+// h1, h2, h3, h4, h5, h6 { line-height: 1.2em; padding: 0 0 20px; }
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span { display: block; }
+h1 { }
+h2 { }
+h3 { }
+h4 { }
+h5 { }
+h6 { }
+// p { padding: 0 0 20px; }
+input[type=text], input[type=email], input[type=password], textarea { -webkit-appearance: none; appearance: none; }
+::-webkit-input-placeholder { color: #000; }
+::-moz-placeholder { color: #000; }
+:-ms-input-placeholder { color: #000; }
+:-moz-placeholder { color: #000; }
+::-moz-focus-inner { border: 0; }
+select:-moz-focusring { color: transparent; text-shadow: 0 0 0 #000; }
+option:not(:checked) { color: black; }
+
+/* Login page
+--------------------------------------------------------------------------------------------------------*/
+// .image { width: 100%; height: 100vh; }
+.page-wrapper{ background-image: url(./Assets/Images/bg-image.jpg);background-repeat: no-repeat; background-position:center; background-size: cover;
+    height: 100vh; }
+.container{ margin: 0; max-width: 1450px; justify-content: space-between;}
+  // .page-wrapper::after{position: absolute; top:0; }
+
+.text{font-weight: 700;font-size: 57px;line-height: 65px; margin-bottom: 20px;}
+.lorem{font-weight: 500;font-size: 22px;line-height: 30px; }
+.col1{margin-top: 120px; }
+.leftside{display: flex; flex-direction: column; max-width: 750px;}
+
+.form-control{border-bottom: 1px solid ; }
+.form-floating > label {color: $secondary;font-size: 15px;}
+
+.col2{box-shadow: 0px 4px 11px 6px rgba(0, 0, 0, 0.03); padding: 0;max-width: 460px;}
+.login-box{padding:45px 50px ; }
+.login-box img{margin-bottom: 22px;}
+.login-box .wlc{margin-bottom: 4px; font-size: 35px;line-height: 40px; font-weight: 600;}
+.login-box p{margin-bottom: 25px;font-size: 20px;line-height: 26px; font-weight: 400;}
+.custom-checkbox{padding-left: 25px;margin-bottom: 28px; color: $secondary;}
+.login-name{margin-bottom: 34px;}
+.login-password{margin-bottom: 14px;}
+
+.login-btn-line{margin-bottom: 34px;
+    .fp{color: $secondary;}
+    .fp:hover{color: #000;}
+}
+
+.login-btn{padding: 6px 34px; text-transform: uppercase;}
+.sign-up-line p{color: $secondary; font-size: 15px;font-weight: 400; margin-bottom: 0;}
+.sign-up-line p a{color: $primary; font-weight: 600;text-transform: uppercase; padding-left: 10px;
+  &:hover{color: #000;}
+}
+
+
+/* Login page
+--------------------------------------------------------------------------------------------------------*/
+/* MainNavigation
+--------------------------------------------------------------------------------------------------------*/
+.main-navigation { }
+
+/* Main Content
+--------------------------------------------------------------------------------------------------------*/
+.main-content {}
+
+/* Footer
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width:1399px) { }
+@media (max-width:1199px) { 
+  .container{justify-content: center;align-items: center;}
+  .col1{margin-top: 50px; }
+  // .col2{max-width: 350px;}
+  .leftside{max-width: 550px;}
+}
+@media (max-width:991px) {
+  // .col1{margin-top: 50px; }
+  .col1 .text{font-size: 40px; font-weight: 600; line-height: 50px;}
+ }
+@media (max-width:767px) {
+  .container{flex-direction: column; width: 100%;}
+  .col1{display: none;}
+  .container{display: flex; flex-direction: column; align-items: center;max-width: 460px;}
+  .login-box{display: flex; flex-direction: column; align-items: center; padding: 20px 20px; max-width: 100%;}
+ }
+@media (max-width:575px) { 
+  .cmp{width:220px ; height: 50px;}
+  .login-box .wlc{font-size: 30px;}
+}
