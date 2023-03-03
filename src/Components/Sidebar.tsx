@@ -6,8 +6,8 @@ import { dash_icon, user_icon, history_icon, docs_icon, wallet_icon, setting_ico
 export default function Sidebar() {
   return (
     <>
+    
       <div className="sidebar">
-        
         <div className="sidelinks">
           <ul>
             <NavLink to="/dashboard" className="nav-item" title="Dashboard">
@@ -36,8 +36,6 @@ export default function Sidebar() {
             </NavLink>
           </ul>
         </div>
-
-
       </div>
     </>
   )
