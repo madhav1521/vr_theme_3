@@ -10,25 +10,19 @@ export default function Navbar() {
   const [status, setStatus] = React.useState(true)
   const [search,setSearch] =useState(true)
     function toggle (){
-      setStatus(!status)
-      if (status){
-          document.body.classList.add('setStatus')
-      }else
-      {
-        document.body.classList.remove('setStatus')
-      }
- 
+      document.body.classList.toggle('setStatus')
     }
     // {status==true ? <Sidebar />:''}
 
     function searchbar(){
-      setSearch(!search)
-      if (search){
-        document.body.classList.add('setSearch')
-      }else
-      {
-        document.body.classList.remove('setSearch')
-      }
+      document.body.classList.toggle('setSearch')
+      // setSearch(!search)
+      // if (search){
+      //   document.body.classList.add('setSearch')
+      // }else
+      // {
+      //   document.body.classList.remove('setSearch')
+      // }
     }
   return (
     <>
@@ -43,16 +37,17 @@ export default function Navbar() {
           <img src={cmp_white_icon} alt="logo" className='brand-icon d-block d-sm-none' />
           <form className="header-search " role="search">
             <input className=" search-input form-control bg-transparent border-0 text-light" type="search" placeholder="Find Something here..." aria-label="Search" />
-            <button onClick={searchbar} type="button" className="btn btn-close-search btn-close" aria-label="Close"></button> 
+            <button onClick={searchbar} type="button" className="btn btn-close-search btn-close " aria-label="Close"></button> 
+            
           </form>
-          <button onClick={searchbar} className='search-btn'><img  src={search_icon} alt="search" className='d-block d-md-none bg-none' /></button>
+          <button onClick={searchbar} className='search-btn'><img src={search_icon} alt="search" className='d-block d-md-none bg-none' /></button>
 
-
+ 
         </div>
         <div className="subdivision2 d-flex align-items-center">
 
-          <Dropdown className='d-flex align-items-center'>
-            <Dropdown.Toggle variant="transparent" id="dropdown-autoclose-inside">
+          <Dropdown className='d-inline mb-hide'>
+            <Dropdown.Toggle variant="transparent" id="dropdown-autoclose-true">
               <img src={bell} alt="bell" className='notification' />
             </Dropdown.Toggle>
             <Dropdown.Menu className='d-item '>
@@ -82,10 +77,6 @@ export default function Navbar() {
           </Dropdown>
         </div>
       </header>
-
-      {/* {status ? <Sidebar /> : ''} */}
-
-
     </>
   )
 }

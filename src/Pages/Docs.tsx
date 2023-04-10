@@ -6,10 +6,13 @@ import Sidebar from '../Components/Sidebar'
 export default function Docs() {
   return (
     <div>
-      <h1>Welcome to Docs Page</h1>
+      
       <Helmet><title>Docs Page</title></Helmet>
       <Navbar></Navbar>
+      <div className='d-flex'>
       <Sidebar></Sidebar>
+      <h1>Welcome to Docs Page</h1>
+      </div>
     </div>
   )
 }

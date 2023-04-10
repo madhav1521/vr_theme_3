@@ -6,10 +6,13 @@ import Sidebar from '../Components/Sidebar'
 export default function Setting() {
   return (
     <div>
-      <h1>Welcome to Setting Page</h1> 
+      
       <Helmet><title>Setting Page</title></Helmet>
       <Navbar></Navbar>
+      <div className='d-flex'>
       <Sidebar></Sidebar>
+      <h1>Welcome to Setting Page</h1>
+      </div>
     </div>
   )
 }

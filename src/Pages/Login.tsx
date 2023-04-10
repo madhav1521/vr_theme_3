@@ -23,8 +23,8 @@ export default function Login() {
         <main className="container row d-flex">
           {/* <div className="login-container " > */}
           <div className="col1 col-lg-7 col-md-6 col-sm ">
-            <div className="leftside">
-              <strong className="text text-white">
+            <div className="leftside ">
+              <strong className="text text-white ">
                 An Avenue to Communicate Your Unique Selling Point
               </strong>
               <p className="lorem text-white">Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown editors now use Lorem Ipsum</p>

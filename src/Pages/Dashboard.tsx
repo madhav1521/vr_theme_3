@@ -15,26 +15,22 @@ export default function Dashboard() {
   return (
     <>
       <Helmet><title>Dashboard Page</title></Helmet>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="main d-flex">
-        
-        <Sidebar></Sidebar>
-        
-
+        <Sidebar />
         <div className="main-container w-100">
-
-          <div className="line1">
+          <div className="page-title">
             <h4>Dashboard</h4>
           </div>
-
-
-          <Row className='line2'>
-            <Col xs='12' sm='10' md='6' lg='4' className="col">
+          <Row className='sticker'>
+            <Col xs='12' md='4' className="col">
               <div className="card w-100">
                 <div className="report-text">
-                  <h5 className='mb-2'>Engaged Users</h5>
-                  <h1 className='mb-1'>98,872</h1>
-                  <h6>+ 25% 20,641 (prev)</h6>
+                  <h5 className='mb-3'>Engaged Users</h5>
+                  <div className='numericals d-block d-md-none d-xxl-block'>
+                    <h1 className='mb-2'>98,872</h1>
+                    <h6>+ 25% 20,641 (prev)</h6>
+                  </div>
                 </div>
                 <div className="report-map">
                   <Tabs defaultActiveKey="Week" id="uncontrolled-tab-example" className=" tab-line d-flex flex-row " >
@@ -49,14 +45,21 @@ export default function Dashboard() {
                     </Tab>
                   </Tabs>
                 </div>
+                <div className='numericals d-none d-md-block d-xxl-none'>
+                  <h1 className='mb-2'>98,872</h1>
+                  <h6>+ 25% 20,641 (prev)</h6>
+                </div>
               </div>
             </Col>
-            <Col xs='12' sm='10' md='6' lg='4' className="col">
+
+            <Col xs='12' md='4' className="col">
               <div className="card w-100">
                 <div className="report-text">
-                  <h5 className='mb-2'>Page Impressions</h5>
-                  <h1 className='mb-1'>154,534</h1>
-                  <h6>+ 14% 20,641 (prev)</h6>
+                  <h5 className='mb-3'>Page Impressions</h5>
+                  <div className='numericals d-block d-md-none d-xxl-block'>
+                    <h1 className='mb-2'>154,534</h1>
+                    <h6>+ 14% 20,641 (prev)</h6>
+                  </div>
                 </div>
                 <div className="report-map" >
                   <Tabs defaultActiveKey="Week" id="uncontrolled-tab-example" className="tab-line d-flex flex-row " >
@@ -71,14 +74,20 @@ export default function Dashboard() {
                     </Tab>
                   </Tabs>
                 </div>
+                <div className='numericals d-none d-md-block d-xxl-none'>
+                  <h1 className='mb-2'>154,534</h1>
+                  <h6>+ 14% 20,641 (prev)</h6>
+                </div>
               </div>
             </Col>
-            <Col xs='12' sm='10' md='6' lg='4' className="col">
+            <Col xs='12' md='4' className="col">
               <div className="card w-100">
                 <div className="report-text">
-                  <h5 className='mb-2'>Conversions</h5>
-                  <h1 className='mb-1'>120,142</h1>
-                  <h6>+ 12% 20,641 (prev)</h6>
+                  <h5 className='mb-3'>Conversions</h5>
+                  <div className='numericals d-block d-md-none d-xxl-block'>
+                    <h1 className='mb-2'>120,142</h1>
+                    <h6>+ 12% 20,641 (prev)</h6>
+                  </div>
                 </div>
                 <div className="report-map">
                   <Tabs defaultActiveKey="Week" id="uncontrolled-tab-example" className="tab-line d-flex flex-row " >
@@ -94,19 +103,23 @@ export default function Dashboard() {
                   </Tabs>
 
                 </div>
+                <div className='numericals d-none d-md-block d-xxl-none '>
+                  <h1 className='mb-2'>120,142</h1>
+                  <h6>+ 12% 20,641 (prev)</h6>
+                </div>
               </div>
             </Col>
           </Row>
 
-          <div className="line3 ">
+          <div className="graph-card">
             <div className="g-1 flex-wrap">
               <div className="spm">
                 <h5>Sales per month</h5>
               </div>
               <div className="stats flex-wrap">
+                <div className='d-flex'><img src={dot1} alt="dot" className='dots img-fluid' /><h6>Engage</h6></div>
                 <div className='d-flex'><img src={dot2} alt="dot" className='dots img-fluid' /><h6>Impression</h6></div>
                 <div className='d-flex'><img src={dot3} alt="dot" className='dots img-fluid' /><h6>Conversions</h6></div>
-                <div className='d-flex'><img src={dot1} alt="dot" className='dots img-fluid' /><h6>Engage</h6></div>
               </div>
             </div>
             <div className="g-2">
@@ -115,9 +128,9 @@ export default function Dashboard() {
           </div>
 
 
-          <Row className='line4 justify-content-sm-center'>
-            <Col sm='12' xl='9' lg='8' md='7' className='data-entry'>
-              <div className="t-1">
+          <Row className='transaction-card'>
+            <Col xl='9' className='data-entry'>
+              <div className="traction-box">
                 <h5>Latest Transaction</h5>
                 <div className="table-responsive">
                   <Table className='table ' >
@@ -131,11 +144,11 @@ export default function Dashboard() {
                     </thead>
                     <tbody>
                       <tr>
-                        <td><h6>8 Sep, 2020</h6></td>
-                        <td><h6>#SK1235</h6></td>
-                        <td><h6>Sony</h6></td>
-                        <td><h6>$6,500</h6></td>
-                        <td ><h6 className="success bg-success">Paid</h6></td>
+                        <td>8 Sep, 2020</td>
+                        <td>#SK1235</td>
+                        <td>Sony</td>
+                        <td>$6,500</td>
+                        <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
                             <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
@@ -148,11 +161,11 @@ export default function Dashboard() {
                         </td>
                       </tr>
                       <tr>
-                        <td><h6>17 Oct, 2020</h6></td>
-                        <td><h6>#SK4567</h6></td>
-                        <td><h6>Gillette</h6></td>
-                        <td><h6>$2,600</h6></td>
-                        <td ><h6 className="success bg-success">Paid</h6></td>
+                        <td>17 Oct, 2020</td>
+                        <td>#SK4567</td>
+                        <td>Gillette</td>
+                        <td>$2,600</td>
+                        <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
                             <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
@@ -165,11 +178,11 @@ export default function Dashboard() {
                         </td>
                       </tr>
                       <tr>
-                        <td><h6>21 Sep, 2020</h6></td>
-                        <td><h6>#SK8754</h6></td>
-                        <td><h6>The Walt Disney Company</h6></td>
-                        <td><h6>$1,630</h6></td>
-                        <td ><h6 className="success bg-success">Paid</h6></td>
+                        <td>21 Sep, 2020</td>
+                        <td>#SK8754</td>
+                        <td>The Walt Disney Company</td>
+                        <td>$1,630</td>
+                        <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
                             <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
@@ -182,11 +195,11 @@ export default function Dashboard() {
                         </td>
                       </tr>
                       <tr>
-                        <td><h6>17 Oct, 2020</h6></td>
-                        <td><h6>#SK2435</h6></td>
-                        <td><h6>IBM</h6></td>
-                        <td><h6>$4,200</h6></td>
-                        <td ><h6 className="success bg-success">Paid</h6></td>
+                        <td>17 Oct, 2020</td>
+                        <td>#SK2435</td>
+                        <td>IBM</td>
+                        <td>$4,200</td>
+                        <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
                             <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
@@ -199,11 +212,11 @@ export default function Dashboard() {
                         </td>
                       </tr>
                       <tr>
-                        <td><h6>24 May, 2020</h6></td>
-                        <td><h6>#SK8759</h6></td>
-                        <td><h6>McDonald's</h6></td>
-                        <td><h6>$4,200</h6></td>
-                        <td ><h6 className="fail bg-danger">Failed</h6></td>
+                        <td>24 May, 2020</td>
+                        <td>#SK8759</td>
+                        <td>McDonald's</td>
+                        <td>$4,200</td>
+                        <td><h6 className="fail bg-warning">Failed</h6></td>
                         <td>
                           <Dropdown>
                             <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
@@ -216,11 +229,11 @@ export default function Dashboard() {
                         </td>
                       </tr>
                       <tr>
-                        <td><h6>22 Oct, 2020</h6></td>
-                        <td><h6>#535353</h6></td>
-                        <td><h6>Louis Vuitton</h6></td>
-                        <td><h6>$6,200</h6></td>
-                        <td ><h6 className="success bg-success">Paid</h6></td>
+                        <td>22 Oct, 2020</td>
+                        <td>#535353</td>
+                        <td>Louis Vuitton</td>
+                        <td>$6,200</td>
+                        <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
                             <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
@@ -233,11 +246,11 @@ export default function Dashboard() {
                         </td>
                       </tr>
                       <tr>
-                        <td><h6>1 Feb, 2020</h6></td>
-                        <td><h6>#SK9987</h6></td>
-                        <td><h6>McDonald's</h6></td>
-                        <td><h6>$2,100</h6></td>
-                        <td ><h6 className="success bg-success">Paid</h6></td>
+                        <td>1 Feb, 2020</td>
+                        <td>#SK9987</td>
+                        <td>McDonald's</td>
+                        <td>$2,100</td>
+                        <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
                             <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
@@ -255,35 +268,37 @@ export default function Dashboard() {
               </div>
             </Col>
 
-            <Col sm='6'  xl='3' lg='4' md='5' className='tester '>
+            <Col xl='3'>
 
-              <div className="t-2">
-                <h5>Monthly Target</h5>
-                <div className="progress-rate d-flex justify-content-center">
-                  <img src={progress} alt="progress-report" className='progress img-fluid' />
-                  <div className='percent d-flex flex-column align-items-center  '>
-                    <h2>70%</h2>
-                    <h6>Progress</h6>
+              <div className="target-box">
+                <div className="progress-parent">
+                  <h5>Monthly Target</h5>
+                  <div className="progress-rate d-flex justify-content-center">
+                    <img src={progress} alt="progress-report" className='progress img-fluid' />
+                    <div className='percent d-flex flex-column align-items-center  '>
+                      <h2>70%</h2>
+                      <h6>Progress</h6>
+                    </div>
+                  </div>
+                  <div className="complete d-flex align-items-center justify-content-center flex-wrap">
+                    <div className='d-flex'><img src={dot3} alt="dot" className=' img-fluid' /><h6>Completed</h6></div>
+                    <div className='d-flex'><img src={dot4} alt="dot" className=' img-fluid' /><h6>left</h6></div>
                   </div>
                 </div>
-                <div className="complete d-flex align-items-center justify-content-center flex-wrap">
-                  <div className='d-flex'><img src={dot3} alt="dot" className=' img-fluid' /><h6>Completed</h6></div>
-                  <div className='d-flex'><img src={dot4} alt="dot" className=' img-fluid' /><h6>left</h6></div>
+                <div className="dollar-parent">
+                  <div className="dollar">
+                    <span>Total Target</span>
+                    <h6>$10,000</h6>
+                  </div>
+                  <div className="dollar">
+                    <span>Completed</span>
+                    <h6>$70,000</h6>
+                  </div>
+                  <div className="dollar">
+                    <span>Remaining</span>
+                    <h6>$30,000</h6>
+                  </div>
                 </div>
-                <div className="dollar">
-                  <span>Total Target</span>
-                  <h6>$10,000</h6>
-                </div>
-                <div className="dollar">
-                  <span>Completed</span>
-                  <h6>$70,000</h6>
-                </div>
-                <div className="dollar">
-                  <span>Remaining</span>
-                  <h6>$30,000</h6>
-                </div>
-
-
               </div>
             </Col>
           </Row>

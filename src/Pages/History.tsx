@@ -6,10 +6,13 @@ import Sidebar from '../Components/Sidebar'
 export default function History() {
   return (
     <>
-      <h1>Welcome to History Page</h1>
+      
       <Helmet><title>History Page</title></Helmet>
       <Navbar></Navbar>
+      <div className='d-flex'>
       <Sidebar></Sidebar>
+      <h1>Welcome to History Page</h1>
+      </div>
     </>
   )
 }

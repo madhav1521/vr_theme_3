@@ -3,11 +3,16 @@ import Navbar from '../Components/Navbar'
 import Sidebar from '../Components/Sidebar'
 import { Route, NavLink } from "react-router-dom";
 import { Helmet } from 'react-helmet';
-import { Button, FloatingLabel, Form } from 'react-bootstrap';
-import { eye } from '../Assets/Images';
+import { Button, FloatingLabel, Form, Tab, Tabs, } from 'react-bootstrap';
 import Password from '../Components/Password';
 import Username from '../Components/Username';
 import Select from '../Components/Select';
+import UploadFile from '../Components/UploadFile';
+import Radio from '../Components/Radio';
+import Checkbox from '../Components/Checkbox';
+import { calender, dropdown_black, dropdown_white } from '../Assets/Images';
+
+
 
 export default function Innerpage() {
   return (
@@ -16,8 +21,6 @@ export default function Innerpage() {
       <Navbar></Navbar>
       <div className="main w-100 d-flex">
         <Sidebar></Sidebar>
-
-        
         <div className="user-page ">
           <div className="page-title">
             <h4>Users</h4>
@@ -26,7 +29,7 @@ export default function Innerpage() {
           {/*  form starts
                 ----------------------------------------------------------------------------------------------------------  */}
           <div className="user-container ">
-            
+
             <div className="column1">
               <h3>One Column</h3>
             </div>
@@ -34,7 +37,15 @@ export default function Innerpage() {
 
             <Username label='Username' type='text' placeholder='Username' />
             <Password label='Password' type='password' placeholder='Username' />
-            <Select select='Country'  />
+            {/* <Select select='Country' /> */}
+            <div className="selection">
+              <Form.Select aria-label="Default select example" className='formselect'>
+                <option>Country</option>
+                <option defaultValue="1">One</option>
+                <option defaultValue="2">Two</option>
+                <option defaultValue="3">Three</option>
+              </Form.Select>
+            </div>
 
             {/* <!-- second column starts
                             ---------------------------------------------------------------------------------------------------------- --> */}
@@ -42,18 +53,32 @@ export default function Innerpage() {
             <div className="column2">
               <h3>Two Column</h3>
             </div>
-            <div className="row mt-4">
+            <div className="row mt-3">
               <div className=" col-md-6">
-                <Username label='Full Name' type='text' placeholder='Your Name' value='John Doe' />
+                <Username label='Full Name' type='text' placeholder='Your Name' defaultValue='John Doe' />
               </div>
               <div className=" col-md-6">
-                <Username label='Education' type='text' placeholder='Disable' value='Disable' />
+                <FloatingLabel controlId="floatingInput" label='Education' className="login-name  border-0 text-secondary b-dash">
+                  <Form.Control type='text' placeholder='Disable' defaultValue='Disable' disabled className='disable' />
+                </FloatingLabel>
               </div>
               <div className="col-md-6">
-                <Username label='Email ID' type='text' placeholder='Email' value='johndoe@gmail.com' />
+
+
+                <div className="input-group has-validation mb-27p mb-md-3 error-input">
+                  <div className="form-floating text-secondary is-invalid">
+                    <Form.Control type="text" className="form-control is-invalid shadow-none" id="floatingInputGroup2" placeholder="Username" defaultValue='John Doe' required />
+                    <label >Error</label>
+                  </div>
+                  <div className="invalid-feedback mb-3">
+                    Please Enter your Full Name
+                  </div>
+                </div>
+
+
               </div>
               <div className=" col-md-6">
-                <Password label='Password' type='password' placeholder='******' value='******' />
+                <Password label='Password' type='password' placeholder='******' defaultValue='******' />
               </div>
             </div>
 
@@ -67,46 +92,58 @@ export default function Innerpage() {
             <div className="row mt-3">
 
               <div className="col-md-4">
-                <Username label='Focus' type='text' placeholder='Focused' value='|' />
+                <Username label='Focus' type='text' placeholder='Focused' defaultValue='|' />
               </div>
-              <div className=" col-md-4">
-                <Username label='Email' type='text' placeholder='John Doe' value='John Doe' />
+              <div className="selectinvalidtext col-md-4">
+
+                <FloatingLabel controlId="floatingInput" label='Email' className="login-name email-label ">
+                  <Form.Control type='text' placeholder='John Doe' defaultValue='John Doe' />
+                </FloatingLabel>
                 <div className="below-select text-danger">
                   Enter Valid email id
                 </div>
               </div>
 
-
-
-              <div className=" col-md-4">
-                <div className="form-floating ">
-                  <input type="text" className="form-control text-dark" id="floatinglName" value="Placeholder" placeholder="First Name" />
-                  <label htmlFor="floatinglName">Label</label>
-                </div>
+              <div className="date col-md-4 ">
+                <FloatingLabel controlId="floatingInput" label="Date picker dialog" className="calender mb-5">
+                  <Form.Control type="date" name='' />
+                </FloatingLabel>
+                
               </div>
             </div>
 
             {/* <!-- Fourth column starts
                             ---------------------------------------------------------------------------------------------------------- --> */}
 
-            <div className="column2">
+            <div className="column4">
               <h3>Four Column</h3>
             </div>
-            <div className="row mt-4">
-              <div className=" col-md-3 col-lg-3 col-md-4 ">
-                <Username label='Email ID' type='text' placeholder='Email' value='johndoe@gmail.com' />
+            <div className="row mt-3">
+              <div className="  col-lg-3 col-md-6 ">
+                <Username label='Email ID' type='text' placeholder='Email' defaultValue='johndoe@gmail.com' />
               </div>
-              <div className=" col-md-3 col-lg-3 col-md-4 ">
-                <Select select='Country' />
+              <div className="  col-lg-3 col-md-6 ">
+                <div className="selection pt-2 mt-1">
+                  <Form.Select aria-label="Default select example" className='formselect'>
+                    <option>Country</option>
+                    <option defaultValue="1">One</option>
+                    <option defaultValue="2">Two</option>
+                    <option defaultValue="3">Three</option>
+                  </Form.Select>
+                </div>
               </div>
 
-              <div className=" col-md-3 col-lg-3 col-md-4 ">
-                <Username label='Full Name' type='text' placeholder='John Doe' value='John Doe' />
+              <div className="  col-lg-3 col-md-6 ">
+                <FloatingLabel controlId="floatingInput" label='Full Name' className="login-name floatinglabel border-0 text-secondary">
+                  <Form.Control type='text' placeholder='John Doe' defaultValue='John Doe' disabled className='disable' />
+                </FloatingLabel>
               </div>
-              <div className="col-md-3 col-lg-3 col-md-4 ">
-                <div className=" form-floating " >
-                  <input type="text" className="focus form-control shadow-none  text-dark" id="floatingFocus" placeholder="First Name.." />
-                  <label htmlFor="floatingFocus" className="focus-label">Focus</label>
+              <div className="col-lg-3 col-md-6 ">
+                <FloatingLabel controlId="floatingInput" label="Phone No" className="floatinglabel">
+                  <Form.Control type="tel" name='' defaultValue='+21 - 23456 7890' placeholder='+21 - 23456 7890' />
+                </FloatingLabel>
+                <div className="below-number text-secondary ">
+                  Enter your register phone no
                 </div>
               </div>
             </div>
@@ -119,57 +156,36 @@ export default function Innerpage() {
               <h5>File Upload</h5>
             </div>
             <div className="uploadbutton d-flex align-items-center form-check-inline ">
-              <input type="file" id="imgupload" className="uploadbutton" />
-              <button id="OpenImgUpload" className="upload border-0 d-flex form-check-inline align-items-center" >
-                <img src="./images/ic-upload.svg" alt="upload" ></img>
-                <span className="text">Upload</span>
-              </button>
-              <span className="nis text-secondary">no item selected</span>
+
+              <UploadFile />
+
+
             </div>
 
             {/* <!-- Sixth column starts (Checkbox)
                             ---------------------------------------------------------------------------------------------------------- --> */}
-
             <div className="column6 ">
-              <h5>Checkbox</h5>
+              <h5>Radio Box</h5>
             </div>
-            <div className="formcheck d-flex ">
-              <div className="form-check form-check-inline ">
-                <input className="form-check-input shadow-none" type="checkbox" value="" id="flexCheckDefault" checked />
-                <label className="form-check-label" htmlFor="flexCheckDefault">
-                  Selected
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input className="form-check-input shadow-none" type="checkbox" value="" id="flexCheckChecked" />
-                <label className="form-check-label" htmlFor="flexCheckChecked">
-                  Not yet Selected
-                </label>
-              </div>
-            </div>
+
+            <Radio />
+
+
 
             {/* <!-- Seventh column starts (Radiobutton)
                             ---------------------------------------------------------------------------------------------------------- --> */}
 
             <div className="column7 ">
-              <h5>Radio Button</h5>
+              <h5>Check Box</h5>
             </div>
-            <div className="formcheck d-flex ">
-              <div className="form-check form-check-inline ">
-                <input className="form-check-input shadow-none" type="radio" value="option1" name="flexRadioDefault" id="Radio1" checked />
-                <label className="form-check-label" htmlFor="Radio1">Selected</label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input className="form-check-input shadow-none" type="radio" name="flexRadioDefault" value="option2" id="Radio2" />
-                <label className="form-check-label" htmlFor="Radio2">Not yet Selected</label>
-              </div>
-            </div>
+
+            <Checkbox />
 
             {/* <!-- Eighth column starts (Call to action)
                             ---------------------------------------------------------------------------------------------------------- --> */}
 
             <div className="column8 ">
-              <h5>Call to action</h5>
+              <h5>Call to Action</h5>
             </div>
             <div className="pri-sec d-sm-flex">
               <button className="primary form-check-inline border-0  mb-2 ">
@@ -178,9 +194,7 @@ export default function Innerpage() {
               <button className="secondary form-check-inline mb-2 ">
                 Secondary
               </button>
-              <button className="disabled form-check-inline mb-2" disabled>
-                disabled
-              </button>
+
             </div>
 
 
@@ -188,37 +202,28 @@ export default function Innerpage() {
                             ---------------------------------------------------------------------------------------------------------- --> */}
 
             <div className="tabs " >
-              <div className="tabbing1">
+              <div className="tab-text">
                 Tabs
               </div>
 
-              <ul className="nav nav-tabs" id="myTab" role="tablist">
-                <li className="tab-item" role="presentation">
-                  <button className="tab-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#para1" type="button"
-                    role="tab" aria-selected="true">Tab1</button>
-                </li>
-                <li className="tab-item" role="presentation">
-                  <button className="tab-link" data-bs-toggle="tab" data-bs-target="#para2" type="button" role="tab"
-                    aria-selected="false">Tab2</button>
-                </li>
-                <li className="tab-item" role="presentation">
-                  <button className="tab-link" data-bs-toggle="tab" data-bs-target="#para3" type="button" role="tab"
-                    aria-selected="false">Tab3</button>
-                </li>
-              </ul>
-              <div className="tab-content" id="myTabContent">
-                <div className="tab-pane fade show active" id="para1" role="tabpanel">
-                  First, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>
+              <Tabs defaultActiveKey="tab 1" id="uncontrolled-tab-example" className=" tab-line d-flex flex-row " >
+                <Tab eventKey="tab 1" title="Tab 1" className="tabbing">
+                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-                <div className="tab-pane fade show " id="para2" role="tabpanel">
-                  Second, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>
+                </Tab>
+                <Tab eventKey="tab 2" title="Tab 2" className="tabbing ">
+                  2 , It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-                <div className="tab-pane fade show " id="para3" role="tabpanel">
-                  Third, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>
-              </div>
+                </Tab>
+                <Tab eventKey="tab 3" title="Tab 3" className="tabbing ">
+                  3, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+                </Tab>
+              </Tabs>
+
+
+
+
             </div>
           </div>
         </div>

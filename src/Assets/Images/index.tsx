@@ -25,3 +25,5 @@ export const dot3 = require('./dot3.svg').default
 export const dot4 = require('./dot4.svg').default
 export const graph = require('./data-graph.svg').default
 export const progress = require('./progress.svg').default
+export const calender = require('./calender.svg').default
+export const dropdown_black = require('./ic-secondary-arrow.svg').default
