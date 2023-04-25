@@ -188,10 +188,10 @@ export default function Innerpage() {
               <h5>Call to Action</h5>
             </div>
             <div className="pri-sec d-sm-flex">
-              <button className="primary form-check-inline border-0  mb-2 ">
+              <button title='primary-button' className="primary form-check-inline border-0  mb-2 ">
                 Primary
               </button>
-              <button className="secondary form-check-inline mb-2 ">
+              <button title='secondary-button' className="secondary form-check-inline mb-2 ">
                 Secondary
               </button>
 

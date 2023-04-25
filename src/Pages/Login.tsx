@@ -51,7 +51,7 @@ export default function Login() {
                 <div className="login-btn-line d-flex justify-content-between align-items-center">
 
 
-                  <Button onClick={() => { navigate('/dashboard') }} variant="primary" className='login-btn text-light'>LOGIN</Button>
+                  <Button title='Login-button' onClick={() => { navigate('/dashboard') }} variant="primary" className='login-btn text-light'>LOGIN</Button>
                   <a href='#' className="fp">Forgot Password?</a>
                 </div>
                 <div className="sign-up-line">

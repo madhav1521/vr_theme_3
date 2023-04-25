@@ -18,6 +18,7 @@ export default function Dashboard() {
       <Navbar />
       <div className="main d-flex">
         <Sidebar />
+        {/* main-container starts ----------------------------------- */}
         <div className="main-container w-100">
           <div className="page-title">
             <h4>Dashboard</h4>
@@ -110,7 +111,7 @@ export default function Dashboard() {
               </div>
             </Col>
           </Row>
-
+          {/* graph card starts ----------------------------------- */}
           <div className="graph-card">
             <div className="g-1 flex-wrap">
               <div className="spm">
@@ -127,7 +128,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-
+          {/* transaction-card starts ----------------------------------- */}
           <Row className='transaction-card'>
             <Col xl='9' className='data-entry'>
               <div className="traction-box">
@@ -151,7 +152,7 @@ export default function Dashboard() {
                         <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
-                            <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
+                            <Dropdown.Toggle variant="primary" id="dropdown-basic" title='View-button'>View</Dropdown.Toggle>
                             <Dropdown.Menu>
                               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -168,7 +169,7 @@ export default function Dashboard() {
                         <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
-                            <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
+                            <Dropdown.Toggle variant="primary" id="dropdown-basic" title='View-button'>View</Dropdown.Toggle>
                             <Dropdown.Menu>
                               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -185,7 +186,7 @@ export default function Dashboard() {
                         <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
-                            <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
+                            <Dropdown.Toggle variant="primary" id="dropdown-basic" title='View-button'>View</Dropdown.Toggle>
                             <Dropdown.Menu>
                               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -202,7 +203,7 @@ export default function Dashboard() {
                         <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
-                            <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
+                            <Dropdown.Toggle variant="primary" id="dropdown-basic" title='View-button'>View</Dropdown.Toggle>
                             <Dropdown.Menu>
                               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -219,7 +220,7 @@ export default function Dashboard() {
                         <td><h6 className="fail bg-warning">Failed</h6></td>
                         <td>
                           <Dropdown>
-                            <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
+                            <Dropdown.Toggle variant="primary" id="dropdown-basic" title='View-button'>View</Dropdown.Toggle>
                             <Dropdown.Menu>
                               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -236,7 +237,7 @@ export default function Dashboard() {
                         <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
-                            <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
+                            <Dropdown.Toggle variant="primary" id="dropdown-basic" title='View-button'>View</Dropdown.Toggle>
                             <Dropdown.Menu>
                               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -253,7 +254,7 @@ export default function Dashboard() {
                         <td><h6 className="success bg-success">Paid</h6></td>
                         <td>
                           <Dropdown>
-                            <Dropdown.Toggle variant="primary" id="dropdown-basic">View</Dropdown.Toggle>
+                            <Dropdown.Toggle variant="primary" id="dropdown-basic" title='View-button'>View</Dropdown.Toggle>
                             <Dropdown.Menu>
                               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
